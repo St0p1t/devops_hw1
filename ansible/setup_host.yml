@@ -1,0 +1,12 @@
+---
+- name: Configure host for container
+  hosts: vm
+  become: true
+  vars:
+    deployer_user: deployer
+    deployer_pubkey: "{{ lookup('ansible.builtin.file', '~/.ssh/devops_hw.pub') }}"
+  roles:
+    - deployer
+    - docker
+    - hardening
+    - compose_app
