@@ -3,7 +3,7 @@
   ansible.builtin.user:
     name: "{{ deployer_user }}"
     shell: /bin/bash
-    groups: sudo
+    groups: [sudo, adm]
     append: true
     create_home: true
 
