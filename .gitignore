@@ -1,0 +1,30 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+tfplan
+crash.log
+*.auto.tfvars
+terraform.tfvars
+
+# Ansible
+*.retry
+.ansible/
+vault_pass*
+
+# VM / Vagrant
+.vagrant/
+
+# Secrets
+*.pem
+*.key
+id_*
+!*.pub
+.env
+
+# Other
+*.log
+.DS_Store
+.idea/
+.vscode/
