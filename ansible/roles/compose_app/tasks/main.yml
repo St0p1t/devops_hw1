@@ -1,0 +1,16 @@
+---
+- name: Create /opt/app
+  ansible.builtin.file:
+    path: /opt/app
+    state: directory
+    owner: "{{ deployer_user }}"
+    group: "{{ deployer_user }}"
+    mode: "0755"
+
+- name: Deploy compose project files
+  ansible.builtin.copy:
+    src: "{{ playbook_dir }}/../compose/"
+    dest: /opt/app/
+    owner: "{{ deployer_user }}"
+    group: "{{ deployer_user }}"
+    mode: preserve
