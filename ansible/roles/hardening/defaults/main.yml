@@ -1,0 +1,7 @@
+---
+ssh_allowed_cidrs:
+  - 10.0.2.2/32
+
+public_tcp_ports:
+  - 80
+  - 8080
